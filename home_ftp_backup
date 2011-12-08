@@ -1,0 +1,12 @@
+#!/bin/bash
+
+rsync -e "ssh -p9014" -vaurPpcL \
+--exclude=artleg/Dropbox \
+--exclude=artleg/tonido \
+--exclude=artleg/TonidoSync \
+--exclude=artleg/TonidoSyncData \
+--exclude=artleg/.local/share/Trash \
+--exclude=artleg/.cache \
+--delete \
+~artleg root@192.168.1.1:/jffs/backup
+echo `date '+%d/%m/%y %H:%M:%S'` >>/home/artleg/logs/home_ftp_backup

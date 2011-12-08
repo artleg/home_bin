@@ -1,0 +1,6 @@
+#!/bin/bash
+rsync -e "ssh -p9014" -vaurP --delete ~artleg/router/keepass.kdb root@192.168.1.1:/jffs/android_ftp/keepass.kdb && \
+rsync -e "ssh -p9014" -vaurP root@192.168.1.1:/jffs/android_ftp/keepass.kdb ~artleg/router/keepass.kdb
+#!/bin/bash
+rsync -e "ssh -p9014" -vaurP --delete /home/artleg/router/keepass.kdb root@192.168.1.1:/jffs/android_ftp/keepass.kdb && \
+notify-send --urgency normal -t 1 -i /home/artleg/.icons/FaenzaMac/devices/48/phone-huawei-pulse.png "Синхронизация прошла успешно"
