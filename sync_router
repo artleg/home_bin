@@ -1,5 +1,2 @@
 #!/bin/bash
-while true
-	do
-	 sleep 300 && rsync -e "ssh -p9014" -vaurP --delete ~artleg/router/ root@192.168.1.1:/jffs/android_ftp && rsync -e "ssh -p9014" -vaurP root@192.168.1.1:/jffs/android_ftp/ ~artleg/router 
-	done
+rsync -e "ssh -p9014" -vaurP --delete ~artleg/router/ root@192.168.1.1:/jffs/android_ftp && rsync -e "ssh -p9014" -vaurP root@192.168.1.1:/jffs/android_ftp/ ~artleg/router 
