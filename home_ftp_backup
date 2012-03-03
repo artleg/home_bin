@@ -9,4 +9,6 @@ rsync -e "ssh -p9014" -vaurPpcL \
 --exclude=artleg/.cache \
 --delete \
 ~artleg root@192.168.1.1:/jffs/backup
+rsync -e "ssh -p9014" -vaurPpcL \
+/opt root@192.168.1.1:/jffs/backup
 echo `date '+%d/%m/%y %H:%M:%S'` >>/home/artleg/logs/home_ftp_backup

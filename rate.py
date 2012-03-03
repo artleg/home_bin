@@ -1,0 +1,1 @@
+/home/artleg/Dropbox/backup/table_tennis/turnament_manager/rating.py
